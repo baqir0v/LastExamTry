@@ -1,0 +1,110 @@
+#watches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  .watchesbox {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    justify-self: center;
+    ul {
+      text-align: center;
+      position: relative;
+      span {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        opacity: 0;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 1;
+      }
+      li {
+        color: #444444;
+        overflow: hidden;
+        img {
+          border-bottom: 3px solid #ff2020;
+        }
+      }
+      .imgdiv {
+        position: relative;
+        .addbasket {
+          position: absolute;
+          cursor: pointer;
+          left: 0;
+          bottom: 5px;
+          width: 100%;
+          height: 0px;
+          color: white;
+          background-color: #ff2020;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.3s;
+          p {
+            display: none;
+          }
+        }
+      }
+      .title {
+        color: #444444;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .price {
+        font-weight: 600;
+      }
+    }
+    ul:hover {
+      .imgdiv {
+        .addbasket {
+          height: 50px;
+          transition: 0.3s;
+          p {
+            display: block;
+          }
+        }
+      }
+      span {
+        transition: 0.3s;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #watches {
+    .watchesbox {
+      width: 80%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      ul{
+        img{
+            width: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #watches {
+    .watchesbox {
+      width: 80%;
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-items: center;
+      ul{
+        img{
+            width: 100px !important;
+        }
+      }
+    }
+  }
+}

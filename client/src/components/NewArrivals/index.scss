@@ -1,0 +1,48 @@
+#newarrivals {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+  .arrivebox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 60%;
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .img{
+        overflow: hidden;
+      }
+      img {
+        transition: 0.5s;
+      }
+      h3 {
+        font-size: 25px;
+        color: #444444;
+      }
+      p {
+        color: #ff2b35;
+        font-weight: 500px;
+      }
+    }
+    .card:hover {
+      img {
+        transform: scale(1.1);
+        transition: 0.5s;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+    #newarrivals{
+        img{
+            width: 200px !important;
+        }
+    }
+}
